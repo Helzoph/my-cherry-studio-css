@@ -1,5 +1,5 @@
-:root {
-    font-family: "JetBrainsMono NF", "Noto Sans Mono CJK SC" !important;
+* {
+  font-family: "JetBrainsMono NFM", "Noto Sans CJK SC Light" !important;
 }
 
 /* 主题变量 */
