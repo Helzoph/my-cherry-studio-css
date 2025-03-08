@@ -1,0 +1,76 @@
+:root {
+    font-family: "JetBrainsMono NF", "Noto Sans Mono CJK SC" !important;
+}
+
+/* 主题变量 */
+:root {
+  --color-black-soft: #1e2127; /*  进一步调暗最深的背景色 */
+  --color-white-soft: #f8f8f2; /* 接近 One Dark Pro 的浅色，更柔和的白色 */
+}
+/* 深色主题 */
+body[theme-mode="dark"] {
+  /* Colors -  调整为 One Dark Pro 更暗的色系 */
+  --color-background: #21252b; /*  One Dark Pro 更深的背景色，之前是 #282c34 */
+  --color-background-soft: #30343b; /*   更深的稍浅背景色，之前是 #383e4a */
+  --color-background-mute: #383e4a; /*  更深的柔和中性背景色，之前是 #3e4451 */
+  --navbar-background: var(--color-black-soft); /* 导航栏背景色 -  使用最深色 */
+  --chat-background: var(--color-black-soft); /* 聊天背景色 -  使用最深色 */
+  --chat-background-user: #282e38; /* 用户聊天背景色 -  稍亮于助手背景，但整体更暗，之前是 #303846 */
+  --chat-background-assistant: #21252b; /* 助手聊天背景色 -  主背景色，与主背景一致，之前是 #282c34 */
+}
+/* 深色主题特定样式 */
+body[theme-mode="dark"] {
+  #content-container {
+    background-color: var(--chat-background-assistant) !important; /* 内容容器背景色 -  保持一致 */
+  }
+  #content-container #messages {
+    background-color: var(--chat-background-assistant); /* 消息背景色 - 保持一致 */
+  }
+  .inputbar-container {
+    background-color: #1e2127; /* 输入框背景色 -  使用最深色，之前是 #21252b */
+    border: 1px solid #5c6370; /* 输入框边框颜色 -  One Dark Pro 评论色系，更融入主题 */
+    border-radius: 4px; /* 输入框边框圆角 -  One Dark Pro 风格更偏向小圆角或直角 */
+  }
+  /* 代码样式 -  调整为 One Dark Pro 代码高亮色系 */
+  code {
+    background-color: #30343b; /* 代码背景色 -  稍浅的背景，突出代码块，之前是 #383e4a */
+    color: #abb2bf; /* 代码文字颜色 -  One Dark Pro 默认文本色 */
+  }
+  pre code {
+    color: #abb2bf; /* 预格式化代码文字颜色 - 保持一致 */
+  }
+}
+/* 浅色主题 -  为了对比度更明显，这里调整为更明显的浅色背景和深色文字，但整体风格可能和 One Dark Pro 差异较大，如果不需要浅色主题，可以考虑移除 */
+body[theme-mode="light"] {
+  /* Colors */
+  --color-white: #ffffff; /* 白色 - 保持白色 */
+  --color-background: #f0f0f0; /* 更明显的浅色背景 */
+  --color-background-soft: #e0e0e0; /*  稍深的浅色背景 */
+  --color-background-mute: #d0d0d0; /* 中性浅色背景 */
+  --navbar-background: var(--color-white-soft); /* 导航栏背景色 - 浅色主题使用浅色 */
+  --chat-background: var(--color-white-soft); /* 聊天背景色 - 浅色主题使用浅色 */
+  --chat-background-user: #f8f8f8; /* 用户聊天背景色 - 更浅 */
+  --chat-background-assistant: #f0f0f0; /* 助手聊天背景色 - 浅色背景 */
+}
+/* 浅色主题特定样式 */
+body[theme-mode="light"] {
+  #content-container {
+    background-color: var(--chat-background-assistant) !important; /* 内容容器背景色 */
+  }
+  #content-container #messages {
+    background-color: var(--chat-background-assistant); /* 消息背景色 */
+  }
+  .inputbar-container {
+    background-color: #ffffff; /* 输入框背景色 -  白色 */
+    border: 1px solid #cccccc; /* 输入框边框颜色 -  浅灰色 */
+    border-radius: 4px; /* 输入框边框圆角 -  与深色主题保持一致 */
+  }
+  /* 代码样式 -  浅色主题下代码样式可以更柔和 */
+  code {
+    background-color: #e0e0e0; /* 代码背景色 - 浅灰色 */
+    color: #333333; /* 代码文字颜色 - 深灰色，对比更明显 */
+  }
+  pre code {
+    color: #000000; /* 预格式化代码文字颜色 - 黑色 */
+  }
+}
